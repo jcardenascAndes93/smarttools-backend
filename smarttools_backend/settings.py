@@ -206,4 +206,4 @@ DEFAULT_FILE_STORAGE = 'smarttools_backend.storage_backends.MediaStorage'
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
