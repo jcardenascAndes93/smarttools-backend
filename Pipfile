@@ -21,6 +21,7 @@ boto3 = "*"
 django-storages = "*"
 python-memcached = "*"
 gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.8"
