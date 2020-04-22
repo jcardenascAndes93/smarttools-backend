@@ -20,6 +20,7 @@ dnspython = "*"
 boto3 = "*"
 django-storages = "*"
 python-memcached = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
