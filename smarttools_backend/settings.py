@@ -107,9 +107,11 @@ SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': os.environ['DB_NAME'],    
+        'NAME': os.environ['DB_NAME'],
+        'HOST': os.environ['HOST'],
         'USER': os.environ['DB_USER'],
         'PASSWORD': os.environ['DB_PASSWORD'],
+
     }
 }
 
