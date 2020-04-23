@@ -114,8 +114,7 @@ DATABASES = {
             'username': os.environ['DB_USER'],
             'password': os.environ['DB_PASSWORD'],
             'authSource': os.environ['DB_NAME'],
-            'authMechanism': 'SCRAM-SHA-1',
-            'retryWrites': False
+            'authMechanism': 'SCRAM-SHA-1'
         }
     }
 }
