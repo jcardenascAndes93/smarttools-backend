@@ -22,6 +22,7 @@ django-storages = "*"
 python-memcached = "*"
 gunicorn = "*"
 django-heroku = "*"
+pylibmc = "*"
 
 [requires]
 python_version = "3.8"
