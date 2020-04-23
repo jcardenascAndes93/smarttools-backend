@@ -23,6 +23,7 @@ python-memcached = "*"
 gunicorn = "*"
 django-heroku = "*"
 pylibmc = "*"
+django-bmemcached = "*"
 
 [requires]
 python_version = "3.8"
