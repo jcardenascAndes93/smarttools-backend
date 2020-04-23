@@ -103,15 +103,19 @@ SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASES = {'default': env.db('DATABASE_URL')}
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
+        'ENFORCE_SCHEMA': True,        
         'NAME': os.environ['DB_NAME'],
-        'HOST': os.environ['HOST'],
-        'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASSWORD'],
-
+        'CLIENT': {
+            'host': os.environ['HOST'],
+            'port': 39960,
+            'username': os.environ['DB_USER'],
+            'password': os.environ['DB_PASSWORD'],
+            'authSource': os.environ['DB_NAME'],
+            'authMechanism': 'SCRAM-SHA-1'
+        }
     }
 }
 
