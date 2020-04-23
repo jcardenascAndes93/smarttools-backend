@@ -139,7 +139,8 @@ CACHES = get_cache()
 
 
 # Sessions cached
-SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+# SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
