@@ -40,12 +40,12 @@ def config_sqs(filename=os.path.join(BASE_DIR, 'db_conf.ini'), section='sqs'):
 def setMsgQueue(video_data):
     response = None
     # Connect to SQS queue
-    param = config_sqs()
+    #param = config_sqs()
     try:
-        sqs = boto3.client('sqs', region_name=param['region_name'], aws_access_key_id=param['aws_access_key_id'],
-                                aws_secret_access_key=param['aws_secret_access_key'])
+        sqs = boto3.client('sqs', region_name=os.environ['SQS_REGION'], aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+                                aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'])
         # Set msg
-        queue_url = param['queue_url']
+        queue_url = os.environ['SQS_URL_QUEUE']
         response = sqs.send_message(
             QueueUrl=queue_url,
             DelaySeconds=10,
